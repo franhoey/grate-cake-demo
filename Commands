@@ -1,0 +1,13 @@
+Step 1
+    Install grate
+        dotnet new tool-manifest
+        dotnet tool install grate
+
+    Create Database
+        dotnet grate --connectionstring="Server=(local);Integrated Security=true;Database=grate_demo;TrustServerCertificate=true;" --files="sqlfiles" --version="0.1.0"
+
+    Test
+        EXEC	[dbo].[Animals_GetBySpecies] @Species = 'Dog'
+        select * from grate.Version
+        select * from grate.ScriptsRun
+        select * from grate.ScriptsRunErrors
