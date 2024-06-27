@@ -25,3 +25,20 @@ Step 3
         select * from grate.Version
         select * from grate.ScriptsRun
         select * from grate.ScriptsRunErrors
+
+Step 4
+    Install Cake
+        dotnet new tool-manifest
+        dotnet tool install Cake.Tool
+
+    Test Cake  
+        dotnet cake
+
+    Alter Database 
+        dotnet cake --Target Deploy-Database
+
+    Test
+        EXEC	[dbo].[Animals_GetBySpecies] @Species = 'Dog'
+        select * from grate.Version
+        select * from grate.ScriptsRun
+        select * from grate.ScriptsRunErrors

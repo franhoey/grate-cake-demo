@@ -2,11 +2,12 @@
   "version": 1,
   "isRoot": true,
   "tools": {
-    "grate": {
-      "version": "1.7.4",
+    "cake.tool": {
+      "version": "4.0.0",
       "commands": [
-        "grate"
-      ]
+        "dotnet-cake"
+      ],
+      "rollForward": false
     }
   }
 }
