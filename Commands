@@ -11,3 +11,7 @@ Step 1
         select * from grate.Version
         select * from grate.ScriptsRun
         select * from grate.ScriptsRunErrors
+
+Step 2
+    Alter Database
+        dotnet grate --connectionstring="Server=(local);Integrated Security=true;Database=grate_demo;TrustServerCertificate=true;" --files="sqlfiles" --version="0.2.0"
