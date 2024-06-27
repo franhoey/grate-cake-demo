@@ -1,4 +1,4 @@
-CREATE PROCEDURE Animals_GetBySpecies
+ALTER PROCEDURE Animals_GetBySpecies
 (
     @Species VARCHAR(255)
 )
@@ -6,6 +6,7 @@ AS
     SELECT 
         AnimalID,
         Species,
-        [Name]
+        [Name],
+        PetName
     FROM vw_Animals
     Where Species = @Species

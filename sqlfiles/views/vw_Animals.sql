@@ -1,6 +1,7 @@
-CREATE VIEW vw_Animals AS
+ALTER VIEW vw_Animals AS
     SELECT 
         AnimalID,
         Species,
-        [Name]
+        [Name],
+        PetName
     FROM Animals; 

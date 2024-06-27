@@ -1,0 +1,2 @@
+ALTER TABLE Animals 
+    ADD PetName VARCHAR(255)

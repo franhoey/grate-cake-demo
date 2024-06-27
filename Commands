@@ -15,3 +15,13 @@ Step 1
 Step 2
     Alter Database
         dotnet grate --connectionstring="Server=(local);Integrated Security=true;Database=grate_demo;TrustServerCertificate=true;" --files="sqlfiles" --version="0.2.0"
+
+Step 3
+    Alter Database
+        dotnet grate --connectionstring="Server=(local);Integrated Security=true;Database=grate_demo;TrustServerCertificate=true;" --files="sqlfiles" --version="0.2.0"
+
+    Test
+        EXEC	[dbo].[Animals_GetBySpecies] @Species = 'Dog'
+        select * from grate.Version
+        select * from grate.ScriptsRun
+        select * from grate.ScriptsRunErrors
